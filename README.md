@@ -1,4 +1,4 @@
-# ABANDONED
+# ABANDONED BUT SUPPORT Wagtail>=2.0 and Django >=1.11
 
 With the introduction of Embedded Content in wagtail 1.12 [https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration](https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration), this package will no longer be maintained.
 
