@@ -6,7 +6,12 @@ from django.urls import reverse
 from embed_video.backends import detect_backend
 from wagtail.admin.forms.search import SearchForm
 from wagtail.admin.modal_workflow import render_modal_workflow
-from wagtail.admin.utils import popular_tags_for_model
+
+try:
+    from wagtail.admin.utils import popular_tags_for_model
+except ImportError:
+    from wagtail.admin.models import popular_tags_for_model
+
 from django.core.paginator import Paginator
 
 from wagtail_embed_videos.models import get_embed_video_model
