@@ -1,4 +1,4 @@
-# ABANDONED BUT SUPPORT Wagtail>=2.0 and Django >=1.11
+# ABANDONED BUT SUPPORT Wagtail >= 2.0 Django >= 2.0 <3.1
 
 With the introduction of Embedded Content in wagtail 1.12 [https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration](https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration), this package will no longer be maintained.
 
@@ -71,6 +71,13 @@ Latest version only suports django>=1.11 and wagtail>=2.0
 
 
 ## Release Notes
+
+### v0.4.3
+
+ - Wagtail version >= 2.0 supported;
+ - Django version >= 3.0 supported (Django >= 3.1 was not tested);
+ - Fix for modal workflow change introduced in Wagtail 2.2
+
 
 ### v0.4.1
 
