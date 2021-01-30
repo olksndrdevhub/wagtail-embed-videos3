@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from distutils.core import setup
+import setuptools
 
-
-setup(
+setuptools.setup(
     name='wagtail_embed_videos',
-    version='0.4.3-alpha.2',
+    version='0.4.3-alpha.1',
     description='Embed Videos for Wagtail CMS.',
     long_description=(
         "Simple app that works similar to wagtailimages,"
