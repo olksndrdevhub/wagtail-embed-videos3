@@ -87,8 +87,20 @@ $('.action-choose', chooserElement).click(function() {
                 },
             },
             'responses': {
-                'embedVideoChosen': function(embedVideoData) {	   
+                'embedVideoChosen': function(embedVideoData) {
                     input.val(embedVideoData.id);
-                });
+                    previewEmbedVideo.attr({
+                        'src': embedVideoData.preview.url,
+                        'alt': embedVideoData.title
+                    });
+                    chooserElement.removeClass('blank');
+                    editLink.attr('href', embedVideoData.edit_link);
+                }
             }
-        }
+        });
+    });
+    $('.action-clear', chooserElement).click(function() {
+        input.val('');
+        chooserElement.addClass('blank');
+    });
+}
