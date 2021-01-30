@@ -2,24 +2,20 @@
 from distutils.core import setup
 import setuptools
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setuptools.setup(
     name='wagtail-embed-videos3-oleksandrdevhub',
-    version='0.4.3-alpha.2',
+    version='0.4.3',
     description='Embed Videos for Wagtail CMS.',
-    long_description=(
-        "Simple app that works similar to wagtailimages,"
-        "but for embedding YouTube and Vimeo videos and music from SoundCloud."
-        "It's an integration of django-embed-video."
-        ),
+    long_description=long_description,
     author='InfoPortugal S.A.',
     author_email='suporte24@infoportugal.com',
     maintainer='Romaniuk Oleksandr',
     maintainer_email='romaniuk.oleksandr@protonmail.com',
     url='https://github.com/olksndrdevhub/wagtail-embedvideos3/',
-    packages=[
-        'wagtail_embed_videos',
-        'wagtail_embed_videos.views',
-        'wagtail_embed_videos.migrations'],
+    packages=setuptools.find_packages(),
     package_data={
         'wagtail_embed_videos': [
             'static/wagtail_embed_videos/js/*.js',
