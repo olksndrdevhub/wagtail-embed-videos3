@@ -1,4 +1,10 @@
-$('.action-choose', chooserElement).click(function() {
+function createEmbedVideoChooser(id) {
+    var chooserElement = $('#' + id + '-chooser');
+    var previewEmbedVideo = chooserElement.find('.preview-image img');
+    var input = $('#' + id);
+    var editLink = chooserElement.find('.edit-link');
+    
+    $('.action-choose', chooserElement).click(function() {
         ModalWorkflow({
             'url': window.chooserUrls.embedVideoChooser,
             'onload': {
