@@ -3,7 +3,7 @@ from distutils.core import setup
 import setuptools
 
 setuptools.setup(
-    name='wagtail_embed_videos',
+    name='wagtail-embed-videos3-oleksandrdevhub',
     version='0.4.3-alpha.1',
     description='Embed Videos for Wagtail CMS.',
     long_description=(
