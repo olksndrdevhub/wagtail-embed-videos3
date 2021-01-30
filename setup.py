@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name='wagtail-embed-videos3-oleksandrdevhub',
-    version='0.4.3-alpha.1',
+    version='0.4.3-alpha.2',
     description='Embed Videos for Wagtail CMS.',
     long_description=(
         "Simple app that works similar to wagtailimages,"

@@ -62,7 +62,7 @@ def chooser(request):
 
         # Pagination
 #         paginator, embed_videos = paginate(request, embed_videos, per_page=12) #DEPRECATED
-        paginator = Paginator(object_list, per_page=25)
+        paginator = Paginator(embed_videos, per_page=25)
         embed_videos = paginator.get_page(request.GET.get('p'))
 
         return render(request, "wagtail_embed_videos/chooser/results.html", {
@@ -73,7 +73,7 @@ def chooser(request):
         })
     else:
 #         paginator, embed_videos = paginate(request, embed_videos, per_page=12) #DEPRECATED
-        paginator = Paginator(object_list, per_page=25)
+        paginator = Paginator(embed_videos, per_page=25)
         embed_videos = paginator.get_page(request.GET.get('p'))
 
         searchform = SearchForm()
