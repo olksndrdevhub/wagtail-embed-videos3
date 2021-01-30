@@ -27,14 +27,14 @@ def get_embed_video_json(embed_video):
     else:
         preview_embed_video = detect_backend(embed_video.url).get_thumbnail_url()
 
-    return json.dumps({
+    return {
         'id': embed_video.id,
         'edit_link': reverse('wagtail_embed_videos_edit_embed_video', args=(embed_video.id,)),
         'title': embed_video.title,
         'preview': {
             'url': preview_embed_video,
         }
-    })
+    }
 
 
 def chooser(request):
@@ -81,22 +81,29 @@ def chooser(request):
     return render_modal_workflow(
         request,
         'wagtail_embed_videos/chooser/chooser.html',
-        'wagtail_embed_videos/chooser/chooser.js',
-        {
+        None, #'wagtail_embed_videos/chooser/chooser.js',
+        template_vars={
             'embed_videos': embed_videos,
             'searchform': searchform,
             'is_searching': False,
             'can_add': can_add,
             'query_string': q,
             'popular_tags': popular_tags_for_model(EmbedVideo),
+        },
+        json_data={
+            'step': 'chooser',
         }
     )
 
 
 def embed_video_chosen(request, embed_video_id):
     embed_video = get_object_or_404(get_embed_video_model(), id=embed_video_id)
+    json_data = get_embed_video_json(embed_video)
+    json_data['step'] = 'embed_video_chosen'
 
     return render_modal_workflow(
-        request, None, 'wagtail_embed_videos/chooser/embed_video_chosen.js',
-        {'embed_video_json': get_embed_video_json(embed_video)}
+        request,
+        None,
+        None, #'wagtail_embed_videos/chooser/embed_video_chosen.js',
+        json_data=json_data
     )
