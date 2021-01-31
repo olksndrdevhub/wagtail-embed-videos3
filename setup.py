@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='wagtail-embed-videos3',
+    name='wagtail-embedvideos3',
     version='0.4.3',
     description='Embed Videos for Wagtail CMS.',
     long_description=long_description,
