@@ -1,4 +1,5 @@
-# ABANDONED, BUT SUPPORT Wagtail >= 2.2 Django >= 2.0
+# ABANDONED, BUT STILL SUPPORT Wagtail >= 2.2 Django >= 2.0 <= 3.1
+
 
 With the introduction of Embedded Content in wagtail 1.12 [https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration](https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration), this package will no longer be needed in new projects. It`s for some old projects, that still use this package.
 
@@ -10,7 +11,7 @@ It's an integration of [django-embed-video](https://github.com/yetty/django-embe
 
 ## WARNING
 
-With recent changes to keep up with Wagtail current versions, we do **not** support versions <= 2.2!
+With recent changes to keep up with Wagtail current versions, we do **not** support versions < 2.2!
 
 Latest version only suports django >= 2.0 and wagtail >= 2.2
 
