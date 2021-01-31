@@ -10,3 +10,8 @@ Core Committers
 * rmartins90
 * tiagofmc
 * Alexandre27
+
+Maintainer
+----------
+
+* olksndrdevhub

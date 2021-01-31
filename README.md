@@ -1,6 +1,6 @@
-# ABANDONED BUT SUPPORT Wagtail >= 2.0 Django >= 2.0 <3.1
+# ABANDONED, BUT SUPPORT Wagtail >= 2.2 Django >= 2.0
 
-With the introduction of Embedded Content in wagtail 1.12 [https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration](https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration), this package will no longer be maintained.
+With the introduction of Embedded Content in wagtail 1.12 [https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration](https://docs.wagtail.io/en/v1.12.6/releases/1.12.html#improved-embed-configuration), this package will no longer be needed in new projects. It`s for some old projects, that still use this package.
 
 # WAGTAIL EMBED VIDEOS
 
@@ -10,15 +10,10 @@ It's an integration of [django-embed-video](https://github.com/yetty/django-embe
 
 ## WARNING
 
-With recent changes to keep up with Wagtail current versions, we do **not** support versions <= 1.6!
+With recent changes to keep up with Wagtail current versions, we do **not** support versions <= 2.2!
 
-Latest version only suports django>=1.11 and wagtail>=2.0
+Latest version only suports django >= 2.0 and wagtail >= 2.2
 
-## REQUIREMENTS
-
-        pip install wagtail-embed-videos
-
-        wagtailimages
 
 ## Quick start
 
@@ -49,8 +44,9 @@ Latest version only suports django>=1.11 and wagtail>=2.0
                 related_name='+'
             )
             ...
-            panels = [EmbedVideoChooserPanel('video')]
-
+            content_panels = [EmbedVideoChooserPanel('video')] 
+        
+        # maybe in some older versions of Wagtail you need replace 'content_panels' with 'panels'
         # accessing the EmbedVideoField() in the model 'wagtail_embed_videos.EmbedVideo'
         # this is the field used for storing the url of the embed video
         video_based_model_instanse.video.url
@@ -74,7 +70,7 @@ Latest version only suports django>=1.11 and wagtail>=2.0
 
 ### v0.4.3
 
- - Wagtail version >= 2.0 supported;
+ - Wagtail version >= 2.2 supported up to version == 2.11.3;
  - Django version >= 3.0 supported (Django >= 3.1 was not tested);
  - Fix for modal workflow change introduced in Wagtail 2.2
 

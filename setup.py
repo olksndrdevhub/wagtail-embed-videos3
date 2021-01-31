@@ -6,15 +6,16 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='wagtail-embed-videos3-oleksandrdevhub',
+    name='wagtail-embed-videos3',
     version='0.4.3',
     description='Embed Videos for Wagtail CMS.',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author='InfoPortugal S.A.',
     author_email='suporte24@infoportugal.com',
     maintainer='Romaniuk Oleksandr',
-    maintainer_email='romaniuk.oleksandr@protonmail.com',
-    url='https://github.com/olksndrdevhub/wagtail-embedvideos3/',
+    maintainer_email='oleksandr.romaniuk@protonmail.com',
+    url='https://github.com/olksndrdevhub/wagtail-embed-videos3',
     packages=setuptools.find_packages(),
     package_data={
         'wagtail_embed_videos': [
@@ -23,15 +24,11 @@ setuptools.setup(
             'templates/wagtail_embed_videos/edit_handlers/*.html',
             'templates/wagtail_embed_videos/embed_videos/*.html',
             'templates/wagtail_embed_videos/widgets/*.html',
-            'templates/wagtail_embed_videos/chooser/*.js',
-            'templates/wagtail_embed_videos/edit_handlers/*.js',
-            'templates/wagtail_embed_videos/embed_videos/*.js',
-            'templates/wagtail_embed_videos/widgets/*.js'
         ]
     },
     install_requires=[
         'wagtail>=2.0',
-        'django-embed-video>=1.0',
+        'django-embed-video>=1.4',
         'six>=1.15.0'],
     classifiers=[
         'Programming Language :: Python',
@@ -45,7 +42,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.8',
         'Operating System :: OS Independent',
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Framework :: Django',
